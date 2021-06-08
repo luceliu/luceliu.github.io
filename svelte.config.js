@@ -1,9 +1,8 @@
-/** @type {import('@sveltejs/kit').Config} */
-const config = {
+import adapter from '@sveltejs/adapter-netlify';
+
+export default {
 	kit: {
-		// hydrate the <div id="svelte"> element in src/app.html
+		adapter: adapter(), // currently the adapter does not take any options
 		target: '#svelte'
 	}
 };
-
-export default config;
