@@ -17,8 +17,11 @@
 	--column-margin-top: 4rem;
 }
 
+html {
+	min-height: 100%;
+}
+
 body {
-	height: 100vh;
 	overflow: hidden;
 	margin: 0;
 	background-color: #f3f7f4;

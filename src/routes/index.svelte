@@ -69,15 +69,17 @@
 		flex-direction: column;
 		justify-content: center;
 		flex: 1;
-		margin: 5em;
+		margin: 2em;
 	}
 
 	p {
-		margin: 0 0 1em 0;
+		margin: 0 0 2em 0;
+		font-size: 18px;
 	}
 
 	h1 {
 		width: 100%;
+		margin-bottom: 0.5em;
 	}
 
 	.links {
@@ -95,5 +97,19 @@
 		border: none;
 		border-top: 1px solid var(--primary-color);
 		margin: 0 0 1em 0;
+	}
+
+	@media only screen and (min-width: 768px) {
+		section {
+			margin: 5em;
+		}
+		p {
+			margin: 0 0 1em 0;
+			font-size: 20px;
+		}
+
+		h1 {
+			margin-bottom: 0.3em;
+		}
 	}
 </style>
