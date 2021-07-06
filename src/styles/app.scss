@@ -1,6 +1,7 @@
 @import '@fontsource/fira-mono';
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Rubik&display=swap');
 
+@import './mixins.scss';
 :root {
 	font-family: 'EB Garamond', serif, Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
 		Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -43,6 +44,10 @@ h2 {
 
 h1 {
 	margin: 0.5em 0 0.25em 0;
+	font-size: 2rem;
+	@include for-size(tablet-landscape-up) {
+		font-size: 3rem;
+	}
 }
 
 p {
@@ -58,10 +63,6 @@ a {
 
 a:hover {
 	color: var(--accent-color);
-}
-
-h1 {
-	font-size: 2rem;
 }
 
 h2 {
@@ -91,10 +92,4 @@ button {
 
 button:focus:not(:focus-visible) {
 	outline: none;
-}
-
-@media (min-width: 720px) {
-	h1 {
-		font-size: 3rem;
-	}
 }

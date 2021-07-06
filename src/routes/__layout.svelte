@@ -1,6 +1,6 @@
 <script>
 	import Header from '$lib/Header/index.svelte';
-	import '../app.css';
+	import '../styles/app.scss';
 </script>
 
 <Header />
@@ -13,7 +13,8 @@
 	<p>© 2021 Luce Liu</p>
 </footer>
 
-<style>
+<style lang="scss">
+	@import '../src/styles/_mixins.scss';
 	main {
 		padding: 1rem;
 		width: 100%;
@@ -21,6 +22,10 @@
 		max-width: 1024px;
 		margin: 0 auto;
 		box-sizing: border-box;
+
+		// @include for-size(tablet-landscape-up) {
+		// 	height: 85vh;
+		// }
 	}
 
 	footer {
@@ -31,16 +36,14 @@
 		font-size: 16px;
 		height: 10vh;
 		box-sizing: border-box;
+
+		@include for-size(tablet-landscape-up) {
+			padding: 40px 0;
+			justify-content: center;
+		}
 	}
 
 	footer p {
 		margin: 0;
-	}
-
-	@media only screen and (min-width: 768px) {
-		footer {
-			padding: 40px 0;
-			justify-content: center;
-		}
 	}
 </style>

@@ -63,23 +63,37 @@
 	</p>
 </section>
 
-<style>
+<style lang="scss">
+	@import './src/styles/_mixins.scss';
 	section {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		flex: 1;
 		margin: 2em;
+
+		@include for-size(tablet-landscape-up) {
+			margin: 5em;
+		}
 	}
 
 	p {
 		margin: 0 0 2em 0;
 		font-size: 18px;
+
+		@include for-size(tablet-landscape-up) {
+			margin: 0 0 1em 0;
+			font-size: 20px;
+		}
 	}
 
 	h1 {
 		width: 100%;
 		margin-bottom: 0.5em;
+
+		@include for-size(tablet-landscape-up) {
+			margin-bottom: 0.3em;
+		}
 	}
 
 	.links {
@@ -97,19 +111,5 @@
 		border: none;
 		border-top: 1px solid var(--primary-color);
 		margin: 0 0 1em 0;
-	}
-
-	@media only screen and (min-width: 768px) {
-		section {
-			margin: 5em;
-		}
-		p {
-			margin: 0 0 1em 0;
-			font-size: 20px;
-		}
-
-		h1 {
-			margin-bottom: 0.3em;
-		}
 	}
 </style>
